@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="appointments">Appointments</string>
+    <string name="bills">Bills</string>
+    <string name="results">Results</string>
+    <string name="medicine">Medicine</string>
+    <string name="list">List</string>
+    <string name="reminders">Reminders</string>
+    <string name="family">Family</string>
+    <string name="members">Members</string>
+</resources>

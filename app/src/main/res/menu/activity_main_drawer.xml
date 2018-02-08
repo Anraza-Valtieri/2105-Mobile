@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+<!--    <group android:checkableBehavior="single">
+
+    </group>-->
+
+    <item android:title="@string/appointments">
+        <menu>
+            <item
+                android:id="@+id/nav_appointment"
+                android:icon="?android:attr/listChoiceIndicatorSingle"
+                android:title="@string/appointments" />
+            <item
+                android:id="@+id/nav_bills"
+                android:icon="?android:attr/listChoiceIndicatorSingle"
+                android:title="@string/bills" />
+            <item
+                android:id="@+id/nav_results"
+                android:icon="?android:attr/listChoiceIndicatorSingle"
+                android:title="@string/results" />
+        </menu>
+    </item>
+    <item android:title="@string/medicine">
+        <menu>
+            <item
+                android:id="@+id/nav_medicines"
+                android:icon="?android:attr/listChoiceIndicatorSingle"
+                android:title="@string/list" />
+            <item
+                android:id="@+id/nav_reminders"
+                android:icon="?android:attr/listChoiceIndicatorSingle"
+                android:title="@string/reminders" />
+        </menu>
+    </item>
+    <item android:title="@string/family">
+        <menu>
+            <item
+                android:id="@+id/nav_family_members"
+                android:icon="?android:attr/listChoiceIndicatorSingle"
+                android:title="@string/members" />
+        </menu>
+    </item>
+
+</menu>
