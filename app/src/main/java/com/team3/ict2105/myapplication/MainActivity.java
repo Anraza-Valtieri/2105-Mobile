@@ -50,6 +50,8 @@ public class MainActivity extends AppCompatActivity
 
 		navigationView = (NavigationView) findViewById(R.id.nav_view);
 		navigationView.setNavigationItemSelectedListener(this);
+		navigationView.getMenu().getItem(0).setChecked(true);
+		onNavigationItemSelected(navigationView.getMenu().getItem(0));
 
 		// Navigation view header
 		navHeader = navigationView.getHeaderView(0);
@@ -59,6 +61,8 @@ public class MainActivity extends AppCompatActivity
 
 		// SET UP Nav drawer Header
 		loadNavHeader();
+
+
 	}
 
 	/***
@@ -68,8 +72,8 @@ public class MainActivity extends AppCompatActivity
 	 */
 	private void loadNavHeader() {
 		// name, Email
-		txtName.setText("Jerry");
-		txtEmail.setText("Jzcxw13@gmail.com");
+		txtName.setText("Tester");
+		txtEmail.setText("Tester@gmail.com");
 	}
 
 	@Override
@@ -113,18 +117,27 @@ public class MainActivity extends AppCompatActivity
 		if (id == R.id.nav_appointment) {
 			Snackbar.make(navigationView, "Now in Appointment", Snackbar.LENGTH_SHORT)
 				.setAction("Action", null).show();
+			getSupportActionBar().setTitle(item.getTitle());
 		} else if (id == R.id.nav_medicines) {
 			Snackbar.make(navigationView, "Now in Medicines", Snackbar.LENGTH_SHORT)
 					.setAction("Action", null).show();
+			getSupportActionBar().setTitle(item.getTitle());
 		} else if (id == R.id.nav_personal) {
 			Snackbar.make(navigationView, "Now in Personal", Snackbar.LENGTH_SHORT)
 					.setAction("Action", null).show();
+			getSupportActionBar().setTitle(item.getTitle());
 		} else if (id == R.id.nav_emergency) {
 			Snackbar.make(navigationView, "Now in Emergency", Snackbar.LENGTH_SHORT)
 					.setAction("Action", null).show();
+			getSupportActionBar().setTitle(item.getTitle());
 		} else if (id == R.id.nav_settings) {
 			Snackbar.make(navigationView, "Now in Settings", Snackbar.LENGTH_SHORT)
 					.setAction("Action", null).show();
+			getSupportActionBar().setTitle(item.getTitle());
+		} else if (id == R.id.nav_home) {
+			Snackbar.make(navigationView, "Now in Home", Snackbar.LENGTH_SHORT)
+					.setAction("Action", null).show();
+			getSupportActionBar().setTitle(item.getTitle());
 		}
 
 		DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
