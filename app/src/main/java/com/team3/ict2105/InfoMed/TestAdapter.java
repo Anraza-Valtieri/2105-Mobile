@@ -12,6 +12,7 @@ import android.widget.TextView;
  * Created by jerahmeelchua on 9/2/18.
  */
 
+// TODO WRITE SPECIFIC ADAPTERS FOR DIFFERENT CARDS
 public class TestAdapter extends RecyclerView.Adapter<TestAdapter.MyViewHolder>{
 	private String[] mDataset;
 
