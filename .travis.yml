@@ -45,5 +45,5 @@ before_script:
 
       # Uncomment and specify the correct key
       # for integration into Slack 
-#notifications:
+notifications:
   slack: ict2105:iU1c0P3uUZndG9IxsJjHZIfn
