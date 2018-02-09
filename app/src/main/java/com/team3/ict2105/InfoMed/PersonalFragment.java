@@ -1,4 +1,4 @@
-package com.team3.ict2105.myapplication;
+package com.team3.ict2105.InfoMed;
 
 import android.app.Fragment;
 import android.os.Bundle;

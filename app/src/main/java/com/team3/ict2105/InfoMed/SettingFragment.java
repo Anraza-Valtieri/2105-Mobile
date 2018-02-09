@@ -1,4 +1,4 @@
-package com.team3.ict2105.myapplication;
+package com.team3.ict2105.InfoMed;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -8,10 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class AppointmentFragment extends Fragment {
-	private static final String TAG = AppointmentFragment.class.getSimpleName();
+public class SettingFragment extends Fragment {
+	private static final String TAG = SettingFragment.class.getSimpleName();
 
-	public AppointmentFragment(){
+	public SettingFragment(){
 		// Required empty public constructor
 	}
 	@Override
@@ -30,18 +30,18 @@ public class AppointmentFragment extends Fragment {
 		rv.setHasFixedSize(true);
 		TestAdapter adapter = new TestAdapter(new String[]{
 				getString(R.string.cardview_contents),
-				"Appointment two",
-				"Appointment three",
-				"Appointment four",
-				"Appointment five",
-				"Appointment six",
-				"Appointment one",
-				"Appointment two",
-				"Appointment three",
-				"Appointment four",
-				"Appointment five",
-				"Appointment six",
-				"Appointment seven"});
+				"Setting two",
+				"Setting three",
+				"Setting four",
+				"Setting five",
+				"Setting six",
+				"Setting one",
+				"Setting two",
+				"Setting three",
+				"Setting four",
+				"Setting five",
+				"Setting six",
+				"Setting seven"});
 		rv.setAdapter(adapter);
 
 		LinearLayoutManager llm = new LinearLayoutManager(getActivity());

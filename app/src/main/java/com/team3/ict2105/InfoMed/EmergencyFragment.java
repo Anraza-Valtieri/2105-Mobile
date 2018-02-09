@@ -1,4 +1,4 @@
-package com.team3.ict2105.myapplication;
+package com.team3.ict2105.InfoMed;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -8,10 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class MedicineFragment extends Fragment {
-	private static final String TAG = MedicineFragment.class.getSimpleName();
+public class EmergencyFragment extends Fragment {
+	private static final String TAG = EmergencyFragment.class.getSimpleName();
 
-	public MedicineFragment(){
+	public EmergencyFragment(){
 		// Required empty public constructor
 	}
 	@Override
@@ -30,18 +30,18 @@ public class MedicineFragment extends Fragment {
 		rv.setHasFixedSize(true);
 		TestAdapter adapter = new TestAdapter(new String[]{
 				getString(R.string.cardview_contents),
-				"Med two",
-				"Med three",
-				"Med four",
-				"Med five",
-				"Med six",
-				"Med one",
-				"Med two",
-				"Med three",
-				"Med four",
-				"Med five",
-				"Med six",
-				"Med seven"});
+				"Emergency two",
+				"Emergency three",
+				"Emergency four",
+				"Emergency five",
+				"Emergency six",
+				"Emergency one",
+				"Emergency two",
+				"Emergency three",
+				"Emergency four",
+				"Emergency five",
+				"Emergency six",
+				"Emergency seven"});
 		rv.setAdapter(adapter);
 
 		LinearLayoutManager llm = new LinearLayoutManager(getActivity());

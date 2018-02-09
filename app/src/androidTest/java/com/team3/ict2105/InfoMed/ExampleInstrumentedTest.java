@@ -1,4 +1,4 @@
-package com.team3.ict2105.myapplication;
+package com.team3.ict2105.InfoMed;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

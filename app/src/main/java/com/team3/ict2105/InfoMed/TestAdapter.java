@@ -1,4 +1,4 @@
-package com.team3.ict2105.myapplication;
+package com.team3.ict2105.InfoMed;
 
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.support.design.widget.Snackbar;
 
 /**
  * Created by jerahmeelchua on 9/2/18.
