@@ -113,20 +113,17 @@ public class MainActivity extends AppCompatActivity
 		if (id == R.id.nav_appointment) {
 			Snackbar.make(navigationView, "Now in Appointment", Snackbar.LENGTH_SHORT)
 				.setAction("Action", null).show();
-		} else if (id == R.id.nav_bills) {
-			Snackbar.make(navigationView, "Now in Bills", Snackbar.LENGTH_SHORT)
-					.setAction("Action", null).show();
-		} else if (id == R.id.nav_family_members) {
-			Snackbar.make(navigationView, "Now in Family Members", Snackbar.LENGTH_SHORT)
-					.setAction("Action", null).show();
 		} else if (id == R.id.nav_medicines) {
 			Snackbar.make(navigationView, "Now in Medicines", Snackbar.LENGTH_SHORT)
 					.setAction("Action", null).show();
-		} else if (id == R.id.nav_reminders) {
-			Snackbar.make(navigationView, "Now in Reminders", Snackbar.LENGTH_SHORT)
+		} else if (id == R.id.nav_personal) {
+			Snackbar.make(navigationView, "Now in Personal", Snackbar.LENGTH_SHORT)
 					.setAction("Action", null).show();
-		} else if (id == R.id.nav_results) {
-			Snackbar.make(navigationView, "Now in Results", Snackbar.LENGTH_SHORT)
+		} else if (id == R.id.nav_emergency) {
+			Snackbar.make(navigationView, "Now in Emergency", Snackbar.LENGTH_SHORT)
+					.setAction("Action", null).show();
+		} else if (id == R.id.nav_settings) {
+			Snackbar.make(navigationView, "Now in Settings", Snackbar.LENGTH_SHORT)
 					.setAction("Action", null).show();
 		}
 

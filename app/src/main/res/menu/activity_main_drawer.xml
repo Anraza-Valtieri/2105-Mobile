@@ -7,6 +7,12 @@
 <!--    <group android:checkableBehavior="single">
 
     </group>-->
+    <group android:id="@+id/grp0" android:checkableBehavior="single" >
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_48dp"
+            android:title="@string/home" />
+    </group>
     <group android:id="@+id/grp1" android:checkableBehavior="single" >
         <item
             android:id="@+id/nav_appointment"
@@ -16,10 +22,10 @@
             android:id="@+id/nav_medicines"
             android:icon="@drawable/ic_healing_black_48dp"
             android:title="@string/medicine" />
-    <item
-        android:id="@+id/nav_personal"
-        android:icon="?android:attr/listChoiceIndicatorSingle"
-        android:title="@string/personal_info" />
+        <item
+            android:id="@+id/nav_personal"
+            android:icon="@drawable/ic_perm_identity_black_48dp"
+            android:title="@string/personal_info" />
     </group>
     <group android:id="@+id/grp2" android:checkableBehavior="single" >
         <item
