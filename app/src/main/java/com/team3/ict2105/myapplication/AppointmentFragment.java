@@ -29,7 +29,7 @@ public class AppointmentFragment extends Fragment {
 		RecyclerView rv = (RecyclerView) rootView.findViewById(R.id.rv_recycler_view);
 		rv.setHasFixedSize(true);
 		TestAdapter adapter = new TestAdapter(new String[]{
-				"Appointment one",
+				getString(R.string.cardview_contents),
 				"Appointment two",
 				"Appointment three",
 				"Appointment four",

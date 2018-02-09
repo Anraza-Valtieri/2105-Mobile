@@ -1,6 +1,7 @@
 package com.team3.ict2105.myapplication;
 
 import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity
 	private TextView txtName, txtEmail;
 	private Toolbar toolbar;
 	private FloatingActionButton fab;
-
+	String tag = "fragmentstack";
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -160,9 +161,14 @@ public class MainActivity extends AppCompatActivity
 			/*FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 			ft.replace(R.id.contain_main, fragment);
 			ft.commit();*/
-			getFragmentManager().beginTransaction()
-					.replace(R.id.contain_main, fragment)
-					.commit();
+			FragmentTransaction ft = getFragmentManager().beginTransaction();
+			//ft.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_left);
+			ft.replace(R.id.contain_main, fragment);
+			//rft.addToBackStack(tag);
+			ft.commit();
+//			getFragmentManager().beginTransaction()
+//					.replace(R.id.contain_main, fragment)
+//					.commit();
 		}
 
 		DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

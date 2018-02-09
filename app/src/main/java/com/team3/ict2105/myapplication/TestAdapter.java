@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.support.design.widget.Snackbar;
 
 /**
  * Created by jerahmeelchua on 9/2/18.

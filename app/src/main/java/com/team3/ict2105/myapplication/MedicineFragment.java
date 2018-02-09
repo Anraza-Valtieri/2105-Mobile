@@ -29,7 +29,7 @@ public class MedicineFragment extends Fragment {
 		RecyclerView rv = (RecyclerView) rootView.findViewById(R.id.rv_recycler_view);
 		rv.setHasFixedSize(true);
 		TestAdapter adapter = new TestAdapter(new String[]{
-				"Med one",
+				getString(R.string.cardview_contents),
 				"Med two",
 				"Med three",
 				"Med four",

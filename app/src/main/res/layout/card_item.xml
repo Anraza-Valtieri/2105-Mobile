@@ -9,7 +9,10 @@
         android:id="@+id/card_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="4dp"
         card_view:cardCornerRadius="4dp"
         card_view:elevation="14dp">
 
@@ -25,7 +28,7 @@
                     android:id="@+id/tv_text"
 
                     android:layout_width="0dp"
-                    android:layout_height="20dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginStart="8dp"

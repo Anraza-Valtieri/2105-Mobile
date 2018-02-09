@@ -29,7 +29,7 @@ public class PersonalFragment extends Fragment {
 		RecyclerView rv = (RecyclerView) rootView.findViewById(R.id.rv_recycler_view);
 		rv.setHasFixedSize(true);
 		TestAdapter adapter = new TestAdapter(new String[]{
-				"Personal one",
+				getString(R.string.cardview_contents),
 				"Personal two",
 				"Personal three",
 				"Personal four",

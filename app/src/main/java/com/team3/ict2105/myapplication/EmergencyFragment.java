@@ -29,7 +29,7 @@ public class EmergencyFragment extends Fragment {
 		RecyclerView rv = (RecyclerView) rootView.findViewById(R.id.rv_recycler_view);
 		rv.setHasFixedSize(true);
 		TestAdapter adapter = new TestAdapter(new String[]{
-				"Emergency one",
+				getString(R.string.cardview_contents),
 				"Emergency two",
 				"Emergency three",
 				"Emergency four",
