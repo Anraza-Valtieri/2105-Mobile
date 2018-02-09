@@ -1,5 +1,6 @@
 package com.team3.ict2105.myapplication;
 
+import android.app.Fragment;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -108,36 +109,60 @@ public class MainActivity extends AppCompatActivity
 		return super.onOptionsItemSelected(item);
 	}
 
+	private void setToolbarTitle(String title) {
+		getSupportActionBar().setTitle(title);
+	}
+
 	@SuppressWarnings("StatementWithEmptyBody")
 	@Override
 	public boolean onNavigationItemSelected(MenuItem item) {
 		// Handle navigation view item clicks here.
 		int id = item.getItemId();
 		NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+
+		//creating fragment object
+		Fragment fragment = null;
+
 		if (id == R.id.nav_appointment) {
-			Snackbar.make(navigationView, "Now in Appointment", Snackbar.LENGTH_SHORT)
-				.setAction("Action", null).show();
-			getSupportActionBar().setTitle(item.getTitle());
+//			Snackbar.make(navigationView, "Now in Appointment", Snackbar.LENGTH_SHORT)
+//				.setAction("Action", null).show();
+			fragment = new AppointmentFragment();
+			setToolbarTitle(item.getTitle().toString());
 		} else if (id == R.id.nav_medicines) {
-			Snackbar.make(navigationView, "Now in Medicines", Snackbar.LENGTH_SHORT)
-					.setAction("Action", null).show();
-			getSupportActionBar().setTitle(item.getTitle());
+//			Snackbar.make(navigationView, "Now in Medicines", Snackbar.LENGTH_SHORT)
+//					.setAction("Action", null).show();
+			fragment = new MedicineFragment();
+			setToolbarTitle(item.getTitle().toString());
 		} else if (id == R.id.nav_personal) {
-			Snackbar.make(navigationView, "Now in Personal", Snackbar.LENGTH_SHORT)
-					.setAction("Action", null).show();
-			getSupportActionBar().setTitle(item.getTitle());
+//			Snackbar.make(navigationView, "Now in Personal", Snackbar.LENGTH_SHORT)
+//					.setAction("Action", null).show();
+			fragment = new PersonalFragment();
+			setToolbarTitle(item.getTitle().toString());
 		} else if (id == R.id.nav_emergency) {
-			Snackbar.make(navigationView, "Now in Emergency", Snackbar.LENGTH_SHORT)
-					.setAction("Action", null).show();
-			getSupportActionBar().setTitle(item.getTitle());
+//			Snackbar.make(navigationView, "Now in Emergency", Snackbar.LENGTH_SHORT)
+//					.setAction("Action", null).show();
+			fragment = new EmergencyFragment();
+			setToolbarTitle(item.getTitle().toString());
 		} else if (id == R.id.nav_settings) {
-			Snackbar.make(navigationView, "Now in Settings", Snackbar.LENGTH_SHORT)
-					.setAction("Action", null).show();
-			getSupportActionBar().setTitle(item.getTitle());
+//			Snackbar.make(navigationView, "Now in Settings", Snackbar.LENGTH_SHORT)
+//					.setAction("Action", null).show();
+			fragment = new SettingFragment();
+			setToolbarTitle(item.getTitle().toString());
 		} else if (id == R.id.nav_home) {
-			Snackbar.make(navigationView, "Now in Home", Snackbar.LENGTH_SHORT)
-					.setAction("Action", null).show();
-			getSupportActionBar().setTitle(item.getTitle());
+//			Snackbar.make(navigationView, "Now in Home", Snackbar.LENGTH_SHORT)
+//					.setAction("Action", null).show();
+			fragment = new HomeFragment();
+			setToolbarTitle(item.getTitle().toString());
+		}
+
+		//replacing the fragment
+		if (fragment != null) {
+			/*FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+			ft.replace(R.id.contain_main, fragment);
+			ft.commit();*/
+			getFragmentManager().beginTransaction()
+					.replace(R.id.contain_main, fragment)
+					.commit();
 		}
 
 		DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
