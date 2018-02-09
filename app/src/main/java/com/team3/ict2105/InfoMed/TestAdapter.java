@@ -1,5 +1,9 @@
 package com.team3.ict2105.InfoMed;
 
+import android.animation.StateListAnimator;
+import android.animation.AnimatorInflater;
+import android.content.Context;
+import android.os.Build;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -13,6 +17,9 @@ import android.widget.TextView;
  */
 
 // TODO WRITE SPECIFIC ADAPTERS FOR DIFFERENT CARDS
+
+//	https://stackoverflow.com/questions/41464629/expand-collapse-animation-in-cardview
+
 public class TestAdapter extends RecyclerView.Adapter<TestAdapter.MyViewHolder>{
 	private String[] mDataset;
 
@@ -50,6 +57,7 @@ public class TestAdapter extends RecyclerView.Adapter<TestAdapter.MyViewHolder>{
 	@Override
 	public void onBindViewHolder(MyViewHolder holder, final int position) {
 		holder.mTextView.setText(mDataset[position]);
+		animate(holder.mCardView, position);
 		holder.mCardView.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
@@ -62,5 +70,12 @@ public class TestAdapter extends RecyclerView.Adapter<TestAdapter.MyViewHolder>{
 	@Override
 	public int getItemCount() {
 		return mDataset.length;
+	}
+
+	private void animate(View view, final int pos) {
+		view.animate().cancel();
+		view.setTranslationY(100);
+		view.setAlpha(0);
+		view.animate().alpha(1.0f).translationY(0).setDuration(300).setStartDelay(pos * 40);
 	}
 }

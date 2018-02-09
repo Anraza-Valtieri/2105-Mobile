@@ -1,5 +1,6 @@
 package com.team3.ict2105.InfoMed;
 
+import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.R.anim.*;
 
 public class MainActivity extends AppCompatActivity
 		implements NavigationView.OnNavigationItemSelectedListener {
@@ -125,50 +127,32 @@ public class MainActivity extends AppCompatActivity
 		Fragment fragment = null;
 
 		if (id == R.id.nav_appointment) {
-//			Snackbar.make(navigationView, "Now in Appointment", Snackbar.LENGTH_SHORT)
-//				.setAction("Action", null).show();
 			fragment = new AppointmentFragment();
 			setToolbarTitle(item.getTitle().toString());
 		} else if (id == R.id.nav_medicines) {
-//			Snackbar.make(navigationView, "Now in Medicines", Snackbar.LENGTH_SHORT)
-//					.setAction("Action", null).show();
 			fragment = new MedicineFragment();
 			setToolbarTitle(item.getTitle().toString());
 		} else if (id == R.id.nav_personal) {
-//			Snackbar.make(navigationView, "Now in Personal", Snackbar.LENGTH_SHORT)
-//					.setAction("Action", null).show();
 			fragment = new PersonalFragment();
 			setToolbarTitle(item.getTitle().toString());
 		} else if (id == R.id.nav_emergency) {
-//			Snackbar.make(navigationView, "Now in Emergency", Snackbar.LENGTH_SHORT)
-//					.setAction("Action", null).show();
 			fragment = new EmergencyFragment();
 			setToolbarTitle(item.getTitle().toString());
 		} else if (id == R.id.nav_settings) {
-//			Snackbar.make(navigationView, "Now in Settings", Snackbar.LENGTH_SHORT)
-//					.setAction("Action", null).show();
 			fragment = new SettingFragment();
 			setToolbarTitle(item.getTitle().toString());
 		} else if (id == R.id.nav_home) {
-//			Snackbar.make(navigationView, "Now in Home", Snackbar.LENGTH_SHORT)
-//					.setAction("Action", null).show();
 			fragment = new HomeFragment();
 			setToolbarTitle(item.getTitle().toString());
 		}
 
 		//replacing the fragment
 		if (fragment != null) {
-			/*FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-			ft.replace(R.id.contain_main, fragment);
-			ft.commit();*/
 			FragmentTransaction ft = getFragmentManager().beginTransaction();
-			//ft.setCustomAnimations(R.anim.enter_from_left, R.anim.exit_to_right, R.anim.enter_from_right, R.anim.exit_to_left);
+			//ft.setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out);
 			ft.replace(R.id.contain_main, fragment);
 			//rft.addToBackStack(tag);
 			ft.commit();
-//			getFragmentManager().beginTransaction()
-//					.replace(R.id.contain_main, fragment)
-//					.commit();
 		}
 
 		DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

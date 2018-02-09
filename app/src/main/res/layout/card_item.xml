@@ -9,12 +9,15 @@
         android:id="@+id/card_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="4dp"
-        card_view:cardCornerRadius="4dp"
-        card_view:elevation="14dp">
+        android:layout_marginBottom="@dimen/card_margin_bottom"
+        android:layout_marginStart="@dimen/card_margin_left"
+        android:layout_marginEnd="@dimen/card_margin_right"
+        android:layout_marginTop="@dimen/card_margin_top"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        card_view:cardCornerRadius="@dimen/card_corner_rad"
+        card_view:elevation="@dimen/card_elevation">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -39,7 +42,7 @@
                     card_view:layout_constraintBottom_toBottomOf="parent"
                     card_view:layout_constraintEnd_toEndOf="parent"
                     card_view:layout_constraintStart_toEndOf="@+id/iv_image"
-                    card_view:layout_constraintTop_toTopOf="parent"></TextView>
+                    card_view:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
                     android:id="@+id/iv_image"
@@ -51,7 +54,7 @@
                     android:src="@drawable/abc_btn_radio_material"
                     card_view:layout_constraintBottom_toBottomOf="parent"
                     card_view:layout_constraintStart_toStartOf="parent"
-                    card_view:layout_constraintTop_toTopOf="parent"></ImageView>
+                    card_view:layout_constraintTop_toTopOf="parent" />
             </android.support.constraint.ConstraintLayout>
 
         </RelativeLayout>
