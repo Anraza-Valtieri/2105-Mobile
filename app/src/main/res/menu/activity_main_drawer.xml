@@ -1,47 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
 <!--    <group android:checkableBehavior="single">
 
     </group>-->
-
-    <item android:title="@string/appointments">
-        <menu>
-            <item
-                android:id="@+id/nav_appointment"
-                android:icon="?android:attr/listChoiceIndicatorSingle"
-                android:title="@string/appointments" />
-            <item
-                android:id="@+id/nav_bills"
-                android:icon="?android:attr/listChoiceIndicatorSingle"
-                android:title="@string/bills" />
-            <item
-                android:id="@+id/nav_results"
-                android:icon="?android:attr/listChoiceIndicatorSingle"
-                android:title="@string/results" />
-        </menu>
-    </item>
-    <item android:title="@string/medicine">
-        <menu>
-            <item
-                android:id="@+id/nav_medicines"
-                android:icon="?android:attr/listChoiceIndicatorSingle"
-                android:title="@string/list" />
-            <item
-                android:id="@+id/nav_reminders"
-                android:icon="?android:attr/listChoiceIndicatorSingle"
-                android:title="@string/reminders" />
-        </menu>
-    </item>
-    <item android:title="@string/family">
-        <menu>
-            <item
-                android:id="@+id/nav_family_members"
-                android:icon="?android:attr/listChoiceIndicatorSingle"
-                android:title="@string/members" />
-        </menu>
-    </item>
-
+    <group android:id="@+id/grp1" android:checkableBehavior="single" >
+    <item
+        android:id="@+id/nav_appointment"
+        android:icon="?android:attr/listChoiceIndicatorSingle"
+        android:title="@string/appointments" />
+    <item
+        android:id="@+id/nav_medicines"
+        android:icon="?android:attr/listChoiceIndicatorSingle"
+        android:title="@string/medicine" />
+    <item
+        android:id="@+id/nav_personal"
+        android:icon="?android:attr/listChoiceIndicatorSingle"
+        android:title="@string/personal_info" />
+    </group>
+    <group android:id="@+id/grp2" android:checkableBehavior="single" >
+    <item
+        android:id="@+id/nav_emergency"
+        android:icon="?android:attr/listChoiceIndicatorSingle"
+        android:title="@string/emergency_contact" />
+    </group>
+    <group android:id="@+id/grp3" android:checkableBehavior="single" >
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="?android:attr/listChoiceIndicatorSingle"
+            android:title="@string/settings" />
+    </group>
 </menu>
