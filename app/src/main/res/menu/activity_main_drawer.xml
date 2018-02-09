@@ -8,29 +8,29 @@
 
     </group>-->
     <group android:id="@+id/grp1" android:checkableBehavior="single" >
-    <item
-        android:id="@+id/nav_appointment"
-        android:icon="?android:attr/listChoiceIndicatorSingle"
-        android:title="@string/appointments" />
-    <item
-        android:id="@+id/nav_medicines"
-        android:icon="?android:attr/listChoiceIndicatorSingle"
-        android:title="@string/medicine" />
+        <item
+            android:id="@+id/nav_appointment"
+            android:icon="@drawable/ic_today_black_48dp"
+            android:title="@string/appointments" />
+        <item
+            android:id="@+id/nav_medicines"
+            android:icon="@drawable/ic_healing_black_48dp"
+            android:title="@string/medicine" />
     <item
         android:id="@+id/nav_personal"
         android:icon="?android:attr/listChoiceIndicatorSingle"
         android:title="@string/personal_info" />
     </group>
     <group android:id="@+id/grp2" android:checkableBehavior="single" >
-    <item
-        android:id="@+id/nav_emergency"
-        android:icon="?android:attr/listChoiceIndicatorSingle"
-        android:title="@string/emergency_contact" />
+        <item
+            android:id="@+id/nav_emergency"
+            android:icon="@drawable/ic_contacts_black_48dp"
+            android:title="@string/emergency_contact" />
     </group>
     <group android:id="@+id/grp3" android:checkableBehavior="single" >
         <item
             android:id="@+id/nav_settings"
-            android:icon="?android:attr/listChoiceIndicatorSingle"
+            android:icon="@drawable/ic_settings_black_48dp"
             android:title="@string/settings" />
     </group>
 </menu>
